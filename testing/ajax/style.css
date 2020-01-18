@@ -1,0 +1,12 @@
+.user {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    background: lightgrey;;
+    padding: 20px;  
+    margin-bottom: 10px;
+}
+
+.user ul {
+    list-style: none;
+}

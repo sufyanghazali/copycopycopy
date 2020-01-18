@@ -1,0 +1,11 @@
+for the drag-resize function, choose between using if else and switch statements
+SE was the mostlikely direction to get dragged so its first
+
+Fixes
+- resizer fucks up if you move mouse too fast and the cursor leaves the handle 
+
+
+#302E91
+#8A8CFB
+#161475
+#6863C7
