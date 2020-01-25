@@ -1,6 +1,16 @@
 const menu = document.querySelector(".menu-overlay");
 const menuBar = document.querySelector(".menu-bar")
 const menuButton = document.querySelector(".menu-button");
+const sections = document.querySelectorAll("section");
+const sectOffsets = [];
+
+sections.forEach((section) =>
+{
+    let offset = section.offsetTop;
+    sectOffsets.push(offset);
+});
+
+
 let prevY = window.scrollY;
 
 function toggleMenu()
@@ -30,6 +40,12 @@ function toggleMenuBar()
 
     }
     prevY = newY;
+}
+
+function toggleBackground()
+{
+    const body = document.querySelector("body");
+    body.classList.toggle("bg-black");
 }
 
 window.addEventListener("scroll", toggleMenuBar)
