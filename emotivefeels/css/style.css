@@ -115,7 +115,7 @@
 }
 
 .emotion__wrapper {
-    position: relative;
+    /* position: relative; */
 }
 
 .emotion {
@@ -173,7 +173,7 @@
 }
 
 .cursor {
-    /* display: none; */
+    /* display: none;   */
     background: cyan;
     position: absolute;
     top: 0;
@@ -190,7 +190,7 @@
 
 .emotion--adventurous {
     background: rgb(255, 236, 0);
-    cursor: url(svg/cursor1.svg), grab;
+    cursor: url(../svg/cursor1.svg);
 }
 
 .emotion--humane {
