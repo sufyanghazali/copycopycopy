@@ -3,7 +3,8 @@ let isResizing = false;
 
 item.addEventListener("mousedown", mousedown);
 
-function mousedown(e) {
+function mousedown(e)
+{
 
     window.addEventListener("mousemove", mousemove);
     window.addEventListener("mouseup", mouseup);
@@ -11,8 +12,10 @@ function mousedown(e) {
     let prevX = e.clientX;
     let prevY = e.clientY;
 
-    function mousemove(e) {
-        if (!isResizing) {
+    function mousemove(e)
+    {
+        if (!isResizing)
+        {
             let newX = prevX - e.clientX;
             let newY = prevY - e.clientY;
 
@@ -26,7 +29,8 @@ function mousedown(e) {
         }
     }
 
-    function mouseup() {
+    function mouseup()
+    {
         window.removeEventListener("mousemove", mousemove);
         window.removeEventListener("mouseup", mouseup);
     }
@@ -35,10 +39,12 @@ function mousedown(e) {
 const resizers = document.querySelectorAll(".resizer");
 let currentResizer;
 
-for (let resizer of resizers) {
+for (let resizer of resizers)
+{
     resizer.addEventListener("mousedown", mousedown);
 
-    function mousedown(e) {
+    function mousedown(e)
+    {
         currentResizer = e.target;
         isResizing = true;
         // position of cursor
@@ -48,7 +54,8 @@ for (let resizer of resizers) {
         window.addEventListener("mousemove", mousemove);
         window.addEventListener("mouseup", mouseup);
 
-        function mousemove(e) {
+        function mousemove(e)
+        {
             const rect = item.getBoundingClientRect();
             const direction = getHandler(e.target);
 
@@ -56,7 +63,8 @@ for (let resizer of resizers) {
             let newY = prevY - e.clientY;
 
             // update position relative to origin
-            switch (direction) {
+            switch (direction)
+            {
                 case "se":
                     item.style.width = `${rect.width - newX}px`;
                     item.style.height = `${rect.height - newY}px`;
@@ -85,13 +93,15 @@ for (let resizer of resizers) {
             prevY = e.clientY;
         }
 
-        function mouseup() {
+        function mouseup()
+        {
             window.removeEventListener("mousemove", mousemove);
             window.removeEventListener("mouseup", mouseup);
             isResizing = false;
         }
 
-        function getHandler(handler) {
+        function getHandler(handler)
+        {
             const direction = handler.className.slice(-2);
             return direction;
         }
