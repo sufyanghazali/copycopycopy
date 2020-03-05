@@ -25,6 +25,7 @@ function onscroll(e)
     const delta = newY - prevY;
     cursor.style.top = `${delta + cursorY - cursorOffset}px`;
     prevY = newY;
+    
 }
 
 
