@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Neue Haas Grotesk Text Pro", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.topbar {
+    position: fixed;
+    width: 100vw;
+    background: #fff;
+}
+
+.headerbar {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.menu__button {
+    display: block;
+    position: fixed;
+    background: #000;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80px;
+    width: 80px;
+    border: 5px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+}
+
+.menu__lines,
+.menu__lines::before,
+.menu__lines::after {
+    display: inline-block;
+    position: absolute;
+    background: rgba(255, 255, 255, 1);
+    width: 26px;
+    height: 5px;
+}
+
+.menu__lines::before,
+.menu__lines::after {
+    content: "";
+}
+
+.menu__lines::after {
+    top: -10px;
+}
+
+.menu__lines::before {
+    bottom: -10px;
+}
+
+.menu__lines {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.products__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 109px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.grid--brand {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 36px;
+    max-width: 1404px;
+    padding: 0 36px 36px;
+    margin: 0 auto;
+}
+
+.text-wrapper--brand {
+    /* margin-left: 50px; */
+}
+
+.product__text {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    font-size: 82px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 0.9;
+    padding: 18px 0;
+}
+
+.copy--brand {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+/**********************************************************************
+ *
+ *  IN-STORE
+ *
+ *********************************************************************/
+
+.section {
+    padding: 36px;
+}
+
+.header--in-store,
+.header--newsletter,
+.header--back {
+    color: #bab9b9;
+    padding: 36px;
+}
+
+.grid--products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 72px 36px;
+}
+
+.product {
+    width: 100%;
+}
+
+.product__desc {
+    margin-top: 18px;
+    font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.product__enq {
+    margin-top: 9px;
+    font-size: 16px;
+}
+
+.email {
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+
+.headerbar--back {}
+
+/**
+ *
+ *  FOOTER
+ *
+ **/
+
+.footer__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.footer__block--right {
+    text-align: right;
+}
