@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 :root {
     font-family: "Neue Haas Grotesk Text Pro", Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -13,6 +18,7 @@
     position: fixed;
     width: 100vw;
     background: #fff;
+    z-index: 10;
 }
 
 .headerbar {
@@ -66,7 +72,8 @@
     transform: translateX(-50%) translateY(-50%);
 }
 
-.products__container {
+.products__container,
+.section--footer {
     display: flex;
     flex-direction: column;
     padding-top: 109px;
@@ -95,7 +102,7 @@
 .header {
     font-size: 82px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: -1px;
     line-height: 0.9;
     padding: 18px 0;
@@ -127,6 +134,28 @@
 .header--back {
     color: #bab9b9;
     padding: 36px;
+    text-align: center;
+}
+
+.header--back {
+    margin-top: 180px;
+    margin-bottom: 36px;
+    color: #000;
+}
+
+.header--back:hover,
+.form__field--submit:hover {
+    animation: .2s linear jiggle;
+    transition: all .2s linear;
+}
+
+.header--back:hover {
+    color: #bab9b9;
+}
+
+.form__field--submit:hover {
+    background: #000;
+    color: #fff;
 }
 
 .grid--products {
@@ -157,18 +186,113 @@
     color: black;
 }
 
-.headerbar--back {}
-
 /**
  *
  *  FOOTER
  *
  **/
 
+.form__field--email,
+.form__field--submit {
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 20px;
+    color: #000;
+    outline: none;
+}
+
+.form__field--email {
+    background: rgb(9, 19, 33, .06);
+}
+
+.form__field--email::placeholder {
+    color: #000;
+}
+
+.form__field--submit {
+    background: #fff;
+    border: 5px solid #000;
+    margin-top: 18px;
+    margin-bottom: 108px;
+}
+
 .footer__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.footer__row--shop {
+    margin-top: 36px;
+    padding: 36px 0;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+}
+
 .footer__block--right {
     text-align: right;
+}
+
+.footer__header,
+.footer__text {
+    font-size: 16px;
+}
+
+.footer__header {
+    font-weight: 700;
+}
+
+.footer__header--nighthawks {
+    text-transform: uppercase;
+}
+
+.footer__text--link {
+    text-decoration: none;
+    color: #000;
+}
+
+.section--newsletter {
+    width: 100%;
+    max-width: 840px;
+    padding: 0 36px;
+    margin: 0 auto;
+}
+
+.section--footer {
+    justify-content: center;
+}
+
+.footer__row--terms {
+    padding: 18px 0 200px;
+}
+
+/**
+ *
+ *  KEYFRAMES
+ *
+ **/
+
+@keyframes jiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }

@@ -8,7 +8,7 @@ let prevX = window.scrollX;
 let prevY = window.scrollY;
 
 wrapper.addEventListener("mousemove", follow);
-// window.addEventListener("scroll", onscroll);
+window.addEventListener("scroll", onscroll);
 
 function follow(e)
 {
@@ -25,12 +25,26 @@ function onscroll(e)
     const delta = newY - prevY;
     cursor.style.top = `${delta + cursorY - cursorOffset}px`;
     prevY = newY;
-    
 }
-
 
 function updateCursor(x, y, xOffset)
 {
     cursor.style.left = `${x + xOffset}px`;
     cursor.style.top = `${y - cursorOffset}px`;
 }
+
+/****************************************************************
+ * 
+ * 
+ * 
+ ***************************************************************/
+function changeCursor(index)
+{
+    // cursorImage
+}
+function setDataCursor(current, index)
+{
+    const newCursor = `svg/cursor${index + 1}.svg`
+    current.setAttribute("data-cursor", newCursor);
+}
+emotions.forEach(setDataCursor);

@@ -12,8 +12,7 @@
 
 <body>
     <header class="headerbar topbar">
-        .
-        <h2 class="header header--brand">Nighthawks</h2>
+        <h2 class="header header--brand"><a href="">Nighthawks</a></h2>
         <nav class="menu">
             <div class="menu__button">
                 <span class="menu__lines">
@@ -21,6 +20,9 @@
             </div>
         </nav>
     </header>
+    <nav class="menu__overlay">
+        
+    </nav>
     <main class="products__container">
         <div class="grid--brand">
             <div class="product__text">
@@ -91,57 +93,56 @@
                 </div>
             </div>
             <div class="headerbar headerbar--back">
-                <h2 class="header header--back">Back to Brands</h2>
+                <h2 class="header header--back">Back to <br> Brands</h2>
             </div>
 
         </section>
-        <section class="section newsletter">
-            <div class="headerbar">
-                <h2 class="header header--newsletter">Newsletter</h2>
-            </div>
-            <form method="POST" class="subscribe">
-                <div class="form__field--email">
-                    <input type="email" name="email" placeholder="Your Email Address" required>
-                </div>
-                <div class="form__field--submit">
-                    <input type="submit" value="Sign me up">
-                </div>
-            </form>
-        </section>
+
     </main>
     <footer class="section section--footer">
-        <div class="footer__row footer__row--shop">
-            <div class="footer__block footer__block--address">
-                <h4 class="header--footer">Nighthawks</h4>
-                <p class="footer__text">
-                    <a class="footer__text--link" href=" #">
-                        Matsunaga blds 201. 2-3-21 Imaizumi Chuo-ku<br>
-                        Fukuoka, 810-0021. JAPAN
-                    </a>
-                </p>
-            </div>
-            <div class="footer__block footer__block--times footer__block--right">
-                <h4 class="header--footer">Opening Times</h4>
-                <p class="footer__text">
-                    Wednesday to Monday: 13:00-20:00<br>
-                    Tuesday: CLOSED
-                </p>
-            </div>
+        <div class="headerbar">
+            <h2 class="header header--newsletter">Newsletter</h2>
         </div>
-        <div class="footer__row">
-            <div class="footer__block footer__block--terms">
-                <h4 class="header--footer">🍪Cookies</h4>
-                <p class="footer--text">
-                    &copy; Nighthawks LTD.
-                </p>
+        <section class="section--newsletter">
+            <form method="POST" class="subscribe">
+                <div>
+                    <input class="form__field--email" type="email" name="email" placeholder="Your Email Address"
+                        required>
+                </div>
+                <div>
+                    <input class="form__field--submit" type="submit" value="Sign me up">
+                </div>
+            </form>
+            <div class="footer__row footer__row--shop">
+                <div class="footer__block footer__block--address">
+                    <h4 class="footer__header footer__header--nighthawks">Nighthawks</h4>
+                    <p class="footer__text">
+                        <a class="footer__text--link" href=" #">
+                            Matsunaga blds 201. 2-3-21 Imaizumi Chuo-ku<br>
+                            Fukuoka, 810-0021. JAPAN
+                        </a>
+                    </p>
+                </div>
+                <div class="footer__block footer__block--times footer__block--right">
+                    <h4 class="footer__header">Opening Times</h4>
+                    <p class="footer__text">
+                        Wednesday to Monday: 13:00-20:00<br>
+                        Tuesday: CLOSED
+                    </p>
+                </div>
             </div>
-            <div class="footer__block footer__block--instagram footer__block--right">
-                <h4 class="header--footer">Instagram</h4>
-                <p class="footer--text">
-                    &copy; Nighthawks LTD.
-                </p>
+            <div class="footer__row footer__row--terms">
+                <div class="footer__block footer__block--terms">
+                    <h4 class="footer__header">🍪Cookies</h4>
+                    <p class="footer__text">
+                        &copy; Nighthawks LTD.
+                    </p>
+                </div>
+                <div class="footer__block footer__block--instagram footer__block--right">
+                    <h4 class="footer__header">Instagram</h4>
+                </div>
             </div>
-        </div>
+        </section>
     </footer>
     <script src="js/script.js"></script>
 </body>
