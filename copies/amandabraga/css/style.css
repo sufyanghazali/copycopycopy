@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navlink {
+    display: inline-flex;
+    margin-top: 500px;
+    overflow: hidden;
+}
+
+/* .navlink:hover .navlink__letter {
+    animation-duration: 0.5s;
+    animation-name: moveup;
+    animation-timing-function:ease-in-out;
+} */
+
+.moveup {
+    /* animation-duration: 0.5s; */
+    animation-name: moveup;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveup {
+    from {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-100%);
+
+    }
+    51% {
+        transform: translateY(100%);
+
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}

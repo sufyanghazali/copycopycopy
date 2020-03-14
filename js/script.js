@@ -4,3 +4,4 @@ copyItems.forEach(item =>
 {
     item.classList.add("copy__item");
 });
+
