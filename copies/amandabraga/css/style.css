@@ -4,11 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    font-family: Roboto;
+}
+
+body {
+    position: relative;
+}
+
 .navbar {
     display: flex;
     flex-direction: column;
     background: lightblue;
     padding: 10px;
+    position: absolute;
+    top: 150px;
+    left: 50px;
 }
 
 .navlink {
@@ -19,7 +30,9 @@
 
 .navlink__wrapper {
     display: inline-block;
+    padding: 5px;
 }
+
 /* .navlink:hover .navlink__letter {
     animation-duration: 0.5s;
     animation-name: moveup;
@@ -32,18 +45,37 @@
     animation-timing-function: ease-out;
 }
 
+.cursor {
+    position: absolute;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background: rgba(0, 0, 0, 1);
+    transition-duration: 600ms;
+    transition-timing-function: ease-out;
+}
+
+
 @keyframes moveup {
     from {
         transform: translateY(0);
     }
 
-    50% {
-        transform: translateY(-100%);
-
+    48% {
+        opacity: 1;
     }
-    51% {
-        transform: translateY(100%);
 
+    49% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(100%);
+    }
+
+    60% {
+        opacity: 1;
     }
 
     to {
