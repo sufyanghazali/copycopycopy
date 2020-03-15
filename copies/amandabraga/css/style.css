@@ -4,12 +4,22 @@
     box-sizing: border-box;
 }
 
-.navlink {
-    display: inline-flex;
-    margin-top: 500px;
-    overflow: hidden;
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background: lightblue;
+    padding: 10px;
 }
 
+.navlink {
+    display: inline-flex;
+    overflow: hidden;
+    background: pink;
+}
+
+.navlink__wrapper {
+    display: inline-block;
+}
 /* .navlink:hover .navlink__letter {
     animation-duration: 0.5s;
     animation-name: moveup;

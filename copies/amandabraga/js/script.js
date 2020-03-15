@@ -15,38 +15,29 @@ const navlinks = document.querySelectorAll(".navlink");
 navlinks.forEach(link =>
 {
     const letters = link.querySelectorAll(".navlink__letter");
-    const duration = 0.4; // here instead of style shee
+    const duration = 0.4; // here instead of stylesheet
     const delay = .03;
 
-    letters.forEach(setLetters);
+    letters.forEach(setLetterDelay);
 
-    function setLetters(element, index)
+    link.addEventListener("mouseenter", () =>
     {
-        setAnimation();
-        addDelay(element, index);
-    }
-
-    function setAnimation()
-    {
-        link.addEventListener("mouseenter", () =>
+        console.log("fired");
+        letters.forEach((letter, index) =>
         {
-            letters.forEach(letter =>
+            letter.classList.add("moveup");
+            // remove animation after being played
+            setTimeout(() =>
             {
-                letter.classList.add("moveup");
-                // remove animation after being played
-                setTimeout(() =>
-                {
-                    letter.classList.remove("moveup");
-                }, (duration + delay) * 1000);
-            });
+                letter.classList.remove("moveup");
+            }, (duration + delay * index) * 1000);
         });
-    }
+    });
 
 
-    // 
-    function addDelay(element, index)
+    function setLetterDelay(element, index)
     {
         element.style.animationDelay = `${delay * index}s`;
         element.style.animationDuration = `${duration}s`;
-    }
+    }   
 });
