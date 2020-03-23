@@ -15,7 +15,7 @@ body {
 .navbar {
     display: flex;
     flex-direction: column;
-    background: lightblue;
+    /* background: lightblue; */
     padding: 10px;
     position: absolute;
     top: 150px;
@@ -25,7 +25,7 @@ body {
 .navlink {
     display: inline-flex;
     overflow: hidden;
-    background: pink;
+    /* background: pink; */
 }
 
 .navlink__wrapper {
@@ -33,11 +33,10 @@ body {
     padding: 5px;
 }
 
-/* .navlink:hover .navlink__letter {
-    animation-duration: 0.5s;
-    animation-name: moveup;
-    animation-timing-function:ease-in-out;
-} */
+.navlink__letter {
+    font-weight: 700;
+    font-size: 20px;
+}
 
 .moveup {
     /* animation-duration: 0.5s; */
@@ -55,6 +54,24 @@ body {
     transition-timing-function: ease-out;
 }
 
+.title {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 250px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 0.8;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+
+body {
+    height: 100vh;
+}
 
 @keyframes moveup {
     from {
@@ -65,6 +82,8 @@ body {
         opacity: 1;
     }
 
+
+    /* change in opacity is so that you don't see the letters jump */ 
     49% {
         transform: translateY(-100%);
         opacity: 0;
@@ -82,5 +101,3 @@ body {
         transform: translateY(0);
     }
 }
-
-Hello
