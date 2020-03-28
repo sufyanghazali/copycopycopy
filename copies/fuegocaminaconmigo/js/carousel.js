@@ -25,8 +25,10 @@ let slideWidth;
  * 
  *********************************************************************/
 
-function insertCarouselNav() {
-    for (let i = 0; i < images.length; i++) {
+function insertCarouselNav()
+{
+    for (let i = 0; i < images.length; i++)
+    {
         const indicator = document.createElement("div");
         const indicatorBar = document.createElement("div");
         indicator.className = "carousel-indicator";
@@ -44,11 +46,13 @@ function insertCarouselNav() {
  * 
  *********************************************************************/
 
-function getSlideWidth() {
+function getSlideWidth()
+{
     return images[0].getBoundingClientRect().width;
 }
 
-function setSlideWidth() {
+function setSlideWidth()
+{
     slideWidth = getSlideWidth();
 }
 
@@ -58,7 +62,8 @@ function setSlideWidth() {
  * 
  *********************************************************************/
 
-function setSlidePosition(image, i) {
+function setSlidePosition(image, i)
+{
     image.style.left = `${i * slideWidth}px`;
 }
 
@@ -68,64 +73,78 @@ function setSlidePosition(image, i) {
  * 
  *********************************************************************/
 
-function getActiveIndex() {
+function getActiveIndex()
+{
     return images.findIndex(image => image.classList.contains("active"));
 }
 
-function moveToTargetSlide(index) {
+function moveToTargetSlide(index)
+{
     track.style.transform = `translateX(-${index * slideWidth}px)`;
 }
 
-function removeActive() {
+function removeActive()
+{
     const actives = document.querySelectorAll(".active");
-    actives.forEach(active => {
+    actives.forEach(active =>
+    {
         active.classList.remove("active");
     });
 }
 
-function addActive(index) {
+function addActive(index)
+{
     images[index].classList.add("active");
     indicators[index].classList.add("active");
 }
 
-function updateActive(index) {
+function updateActive(index)
+{
     removeActive();
     addActive(index);
 }
 
-function updateTrack(index) {
+function updateTrack(index)
+{
     moveToTargetSlide(index);
     updateActive(index);
 }
 
-function navSlide(e) {
+function navSlide(e)
+{
     const active = getActiveIndex();
     const target = e.target.closest(".carousel-indicator");
     const targetIndex = indicators.indexOf(target);
 
-    if (targetIndex >= 0 && targetIndex != active) {
+    if (targetIndex >= 0 && targetIndex != active)
+    {
         console.log("fired");
         updateTrack(targetIndex);
     }
 }
 
-function nextSlide() {
+function nextSlide()
+{
     const targetIndex = getActiveIndex() + 1;
     console.log(targetIndex);
-    if (targetIndex < images.length) {
+    if (targetIndex < images.length)
+    {
         updateTrack(targetIndex);
     }
 }
 
-function prevSlide() {
+function prevSlide()
+{
     const targetIndex = getActiveIndex() - 1;
 
-    if (targetIndex >= 0) {
+    if (targetIndex >= 0)
+    {
         updateTrack(targetIndex);
     }
 }
 
-function initialize() {
+function initialize()
+{
     setSlideWidth();
     images.forEach(setSlidePosition);
 }
@@ -134,11 +153,13 @@ leftBtn.addEventListener("click", prevSlide);
 rightBtn.addEventListener("click", nextSlide);
 carouselNav.addEventListener("click", navSlide);
 
-window.onload = function () {
+window.onload = function ()
+{
     insertCarouselNav();
     initialize();
 }
-window.onresize = function () {
+window.onresize = function ()
+{
     console.log("resized");
     initialize();
     moveToTargetSlide(getActiveIndex());
