@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Akzidenz Grotesk";
+  src: url("../fonts/AGNextLight.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Akzidenz Grotesk";
+  font-size: 16px;
+  line-height: 22px;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+img,
+video {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+}
+
+.work {
+  width: 100%;
+}
+
+.check {
+  border: 1px solid pink;
+}
+
+.header {
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.headline {
+  font-size: calc(16px * 2.25);
+  line-height: 44px;
+}
+
+.main {
+  width: 100%;
+}
+
+.portfolio {
+  width: 100%;
+  padding: 0 8px;
+
+}
+
+.project {
+  margin-top: 10px;
+}
+
+.work__image--main {
+  width: 100%;
+}
+
+.project__content {
+  display: none;
+  animation: fadeIn 1s linear;
+}
+
+.text-type {
+  padding-right: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-right: 1px solid black;
+  }
+  49% {
+    border-right: 1px solid black;
+  }
+  50% {
+    border-right: none;
+  }
+  100% {
+    border-right: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .project__content--show {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
