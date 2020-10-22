@@ -19,7 +19,12 @@
     font-size: 64px;
     font-weight: 400;
     margin-top: 250px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+}
+
+.copy__item, .copy__item:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .subheader {
